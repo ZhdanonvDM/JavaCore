@@ -1,5 +1,4 @@
 package pro.sky.javacore.inheritance;
-
 public class StudentHogwarts {
     private String name;
     private int powerMagic;

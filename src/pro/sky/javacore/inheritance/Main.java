@@ -2,7 +2,6 @@ package pro.sky.javacore.inheritance;
 
 public class Main {
     public static void main(String[] args) {
-        
 //Создание базы студентов
        StudentGryffindor [] studentsGryffindor = {
                new StudentGryffindor("Harry Potter", 96, 49, 57, 81, 47),

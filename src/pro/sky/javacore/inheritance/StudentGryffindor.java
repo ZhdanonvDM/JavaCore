@@ -1,7 +1,6 @@
 package pro.sky.javacore.inheritance;
 
 public class StudentGryffindor extends StudentHogwarts {
-
     private int nobility;
     private int honor;
     private int courage;
