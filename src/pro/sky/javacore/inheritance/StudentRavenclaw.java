@@ -45,7 +45,7 @@ public class StudentRavenclaw extends StudentHogwarts {
     public void setCreativity(int creativity) {
         this.creativity = creativity;
     }
-    public String studentDescription() {
+    public String toString() {
         return  "name='" + super.getName() + '\'' +
                 ", faculty='" + "Ravenclaw" + '\'' +
                 ", powerMagic=" + super.getPowerMagic() +
@@ -57,14 +57,8 @@ public class StudentRavenclaw extends StudentHogwarts {
                 ;
     }
 
-    public static int totalScore (StudentRavenclaw sr) {
-        int total = sr.witty + sr.wise + sr.creativity + sr.smart;
+    public int totalScore () {
+        int total = this.witty + this.wise + this.creativity + this.smart;
         return total;
-    }
-
-    public static void studentComparison (StudentRavenclaw sr1, StudentRavenclaw sr2) {
-        if (totalScore(sr1) > totalScore(sr2)) {
-            System.out.println(sr1.getName() + " лучший Когтевранец, чем " + sr2.getName());
-        } else {System.out.println(sr2.getName() + " лучший Когтевранец,, чем " + sr1.getName());}
     }
 }

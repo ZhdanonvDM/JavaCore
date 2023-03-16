@@ -36,7 +36,7 @@ public class StudentHufflepuff extends StudentHogwarts{
         this.honest = honest;
     }
 
-    public String studentDescription() {
+    public String toString() {
         return  "name='" + super.getName() + '\'' +
                 ", faculty='" + "Hufflepuff" + '\'' +
                 ", powerMagic=" + super.getPowerMagic() +
@@ -45,13 +45,13 @@ public class StudentHufflepuff extends StudentHogwarts{
                 ", loyal=" + loyal +
                 ", honest=" + honest;
     }
-    public static int totalScore (StudentHufflepuff sh) {
-        int total = sh.hardworking + sh.honest + sh.loyal;
+    public int totalScore () {
+        int total = this.hardworking + this.honest + this.loyal;
         return total;
     }
 
     public static void studentComparison (StudentHufflepuff sh1, StudentHufflepuff sh2) {
-        if (totalScore(sh1) > totalScore(sh2)) {
+        if (sh1.totalScore() > sh2.totalScore()) {
             System.out.println(sh1.getName() + " лучший Пуффендуец, чем " + sh2.getName());
         } else {System.out.println(sh2.getName() + " лучший Пуффендуец, чем " + sh1.getName());}
     }

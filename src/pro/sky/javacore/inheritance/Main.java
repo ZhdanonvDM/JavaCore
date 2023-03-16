@@ -25,19 +25,39 @@ public class Main {
                new StudentSlytherin("Gregory Goyle", 76, 26, 48, 45, 53, 48, 22),
         };
 //Тестирование методов, которые выводят на экран описание студента
-        System.out.println(studentsGryffindor[0].studentDescription());
-        System.out.println(studentsHufflepuff[0].studentDescription());
-        System.out.println(studentsRavenclaws[0].studentDescription());
-        System.out.println(studentsSlytherin[0].studentDescription());
+        System.out.println(studentsGryffindor[0].toString());
+        System.out.println(studentsHufflepuff[0].toString());
+        System.out.println(studentsRavenclaws[0].toString());
+        System.out.println(studentsSlytherin[0].toString());
 
 //Тестирование методов, по одному для каждого факультета, которые сравнивают между собой учеников одного факультета по свойствам
-        StudentGryffindor.studentComparison(studentsGryffindor[0], studentsGryffindor[1]);
-        StudentHufflepuff.studentComparison(studentsHufflepuff[0], studentsHufflepuff[1]);
-        StudentRavenclaw.studentComparison(studentsRavenclaws[0], studentsRavenclaws[1]);
-        StudentSlytherin.studentComparison(studentsSlytherin[0], studentsSlytherin[1]);
+        studentGryffindorComparison(studentsGryffindor[0], studentsGryffindor[1]);
+        studentHufflepuffComparison(studentsHufflepuff[0], studentsHufflepuff[1]);
+        studentRavenclawComparison(studentsRavenclaws[0], studentsRavenclaws[1]);
+        studentSlytherinComparison(studentsSlytherin[0], studentsSlytherin[1]);
 
 // Тестирование метода, который сравнивает двух любых учеников Хогвартса по силе магии и расстоянию трансгрессии
         StudentHogwarts.studentComparison(studentsRavenclaws[0], studentsSlytherin[1]);
+    }
+    public static void studentSlytherinComparison (StudentSlytherin ss1, StudentSlytherin ss2) {
+        if (ss1.totalScore() > ss2.totalScore()) {
+            System.out.println(ss1.getName() + " лучший Слизеринец, чем " + ss2.getName());
+        } else {System.out.println(ss2.getName() + " лучший Слизеринец, чем " + ss1.getName());}
+    }
+    public static void studentRavenclawComparison (StudentRavenclaw sr1, StudentRavenclaw sr2) {
+        if (sr1.totalScore() > sr2.totalScore()) {
+            System.out.println(sr1.getName() + " лучший Когтевранец, чем " + sr2.getName());
+        } else {System.out.println(sr2.getName() + " лучший Когтевранец,, чем " + sr1.getName());}
+    }
+    public static void studentHufflepuffComparison (StudentHufflepuff sh1, StudentHufflepuff sh2) {
+        if (sh1.totalScore() > sh2.totalScore()) {
+            System.out.println(sh1.getName() + " лучший Пуффендуец, чем " + sh2.getName());
+        } else {System.out.println(sh2.getName() + " лучший Пуффендуец, чем " + sh1.getName());}
+    }
+    public static void studentGryffindorComparison (StudentGryffindor sg1, StudentGryffindor sg2) {
+        if (sg1.totalScore() > sg2.totalScore()) {
+            System.out.println(sg1.getName() + " лучший Гриффиндорец, чем " + sg2.getName());
+        } else {System.out.println(sg2.getName() + " лучший Гриффиндорец, чем " + sg1.getName());}
     }
 }
 

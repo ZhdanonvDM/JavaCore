@@ -55,7 +55,7 @@ public class StudentSlytherin extends StudentHogwarts {
     public void setLustPower(int lustPower) {
         this.lustPower = lustPower;
     }
-    public String studentDescription() {
+    public String toString() {
         return "name='" + super.getName() + '\'' +
                 ", faculty='" + "Slytherin" + '\'' +
                 ", powerMagic=" + super.getPowerMagic() +
@@ -67,14 +67,8 @@ public class StudentSlytherin extends StudentHogwarts {
                 ", lustPower=" + lustPower;
     }
 
-    public static int totalScore (StudentSlytherin sr) {
-        int total = sr.ambition + sr.lustPower + sr.resourcefulness + sr.cunning + sr.determination;
+    public int totalScore () {
+        int total = this.ambition + this.lustPower + this.resourcefulness + this.cunning + this.determination;
         return total;
-    }
-
-    public static void studentComparison (StudentSlytherin sr1, StudentSlytherin sr2) {
-        if (totalScore(sr1) > totalScore(sr2)) {
-            System.out.println(sr1.getName() + " лучший Слизеринец, чем " + sr2.getName());
-        } else {System.out.println(sr2.getName() + " лучший Слизеринец, чем " + sr1.getName());}
     }
 }

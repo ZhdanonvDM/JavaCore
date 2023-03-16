@@ -35,7 +35,7 @@ public class StudentGryffindor extends StudentHogwarts {
     public void setCourage(int courage) {
         this.courage = courage;
     }
-    public String studentDescription() {
+    public String toString() {
         return  "name='" + super.getName() + '\'' +
                 ", faculty='" + "Hufflepuff" + '\'' +
                 ", powerMagic=" + super.getPowerMagic() +
@@ -44,14 +44,8 @@ public class StudentGryffindor extends StudentHogwarts {
                 ", honor=" + honor +
                 ", courage=" + courage;
     }
-    public static int totalScore (StudentGryffindor sg) {
-        int total = sg.getNobility() + sg.getHonor() + sg.getCourage();
+    public int totalScore () {
+        int total = this.getNobility() + this.getHonor() + this.getCourage();
         return total;
-    }
-
-    public static void studentComparison (StudentGryffindor sg1, StudentGryffindor sg2) {
-        if (totalScore(sg1) > totalScore(sg2)) {
-            System.out.println(sg1.getName() + " лучший Гриффиндорец, чем " + sg2.getName());
-        } else {System.out.println(sg2.getName() + " лучший Гриффиндорец, чем " + sg1.getName());}
     }
 }
