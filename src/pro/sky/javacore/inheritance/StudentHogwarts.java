@@ -26,7 +26,6 @@ public class StudentHogwarts {
     public void setPowerMagic(int powerMagic) {
         this.powerMagic = powerMagic;
     }
-
     public int getDistanceTransgress() {
         return distanceTransgress;
     }
@@ -34,7 +33,6 @@ public class StudentHogwarts {
     public void setDistanceTransgress(int distanceTransgress) {
         this.distanceTransgress = distanceTransgress;
     }
-
     public static void studentComparison (StudentHogwarts sh1, StudentHogwarts sh2) {
         if (sh1.getPowerMagic() > sh2.getPowerMagic()) {
             System.out.println(sh1.getName() + " обладает большей мощностью магии, чем " + sh2.getName());

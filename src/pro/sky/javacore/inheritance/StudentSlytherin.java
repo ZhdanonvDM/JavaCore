@@ -66,7 +66,6 @@ public class StudentSlytherin extends StudentHogwarts {
                 ", resourcefulness=" + resourcefulness +
                 ", lustPower=" + lustPower;
     }
-
     public int totalScore () {
         int total = this.ambition + this.lustPower + this.resourcefulness + this.cunning + this.determination;
         return total;

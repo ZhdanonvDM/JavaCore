@@ -56,7 +56,6 @@ public class StudentRavenclaw extends StudentHogwarts {
                 ", creativity=" + creativity
                 ;
     }
-
     public int totalScore () {
         int total = this.witty + this.wise + this.creativity + this.smart;
         return total;

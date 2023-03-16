@@ -56,7 +56,7 @@ public class Main {
     }
     public static void studentGryffindorComparison (StudentGryffindor sg1, StudentGryffindor sg2) {
         if (sg1.totalScore() > sg2.totalScore()) {
-            System.out.println(sg1.getName() + " лучший Гриффиндорец, чем " + sg2.getName());
+           System.out.println(sg1.getName() + " лучший Гриффиндорец, чем " + sg2.getName());
         } else {System.out.println(sg2.getName() + " лучший Гриффиндорец, чем " + sg1.getName());}
     }
 }

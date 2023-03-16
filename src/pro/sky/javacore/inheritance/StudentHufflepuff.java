@@ -49,7 +49,6 @@ public class StudentHufflepuff extends StudentHogwarts{
         int total = this.hardworking + this.honest + this.loyal;
         return total;
     }
-
     public static void studentComparison (StudentHufflepuff sh1, StudentHufflepuff sh2) {
         if (sh1.totalScore() > sh2.totalScore()) {
             System.out.println(sh1.getName() + " лучший Пуффендуец, чем " + sh2.getName());

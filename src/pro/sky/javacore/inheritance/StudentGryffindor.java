@@ -47,5 +47,5 @@ public class StudentGryffindor extends StudentHogwarts {
     public int totalScore () {
         int total = this.getNobility() + this.getHonor() + this.getCourage();
         return total;
-    }
+     }
 }
